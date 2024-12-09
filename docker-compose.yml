@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres
+    container_name: postgres-db
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=hello@1234
+      - POSTGRES_DB=sql101
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgres/data 
+    networks:
+      - hi-net
+    
+  adminer:
+    image: adminer
+    container_name: ui
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - hi-net
+
+volumes:
+  postgres_data:
+
+
+networks:
+  hi-net:
