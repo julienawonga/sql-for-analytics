@@ -4,9 +4,9 @@ import random
 from datetime import datetime, timedelta
 
 # Configuration de la connexion
-DB_NAME = "sql101"
-DB_USER = "admin"
-DB_PASSWORD = "hello@1234"
+DB_NAME = "analytics"
+DB_USER = "postgres"
+DB_PASSWORD = "1234"
 DB_HOST = "localhost"
 
 
@@ -137,8 +137,8 @@ def generate_orders(conn, n=10):
 if __name__ == "__main__":
     conn = connect()
     if conn:
-        #generate_products(conn, n=4)
-        #generate_customers(conn, n=7)
-        #generate_employees(conn, n=2)
+        generate_products(conn, n=4)
+        generate_customers(conn, n=7)
+        generate_employees(conn, n=2)
         generate_orders(conn, n=20)
         conn.close()
