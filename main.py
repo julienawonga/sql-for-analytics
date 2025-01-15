@@ -4,9 +4,9 @@ import random
 from datetime import datetime, timedelta
 
 # Configuration de la connexion
-DB_NAME = "analytics"
-DB_USER = "postgres"
-DB_PASSWORD = "1234"
+DB_NAME = "sql101"
+DB_USER = "admin"
+DB_PASSWORD = "hello@1234"
 DB_HOST = "localhost"
 
 

@@ -1,3 +1,4 @@
+-- Active: 1736940135075@@127.0.0.1@5432@sql101
 -- Création de la table Products
 CREATE TABLE Products (
     ProductID SERIAL PRIMARY KEY,
